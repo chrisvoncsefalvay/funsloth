@@ -1,0 +1,57 @@
+{
+  "name": "funsloth",
+  "version": "1.0.0",
+  "description": "Claude Code skills marketplace for fine-tuning language models with Unsloth",
+  "author": "Chris von Csefalvay <chris@chrisvoncsefalvay.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chrisvoncsefalvay/funsloth"
+  },
+  "keywords": [
+    "claude-code",
+    "unsloth",
+    "fine-tuning",
+    "llm",
+    "lora",
+    "qlora",
+    "machine-learning"
+  ],
+  "claudePlugin": {
+    "name": "funsloth",
+    "displayName": "Funsloth - Unsloth Fine-tuning Skills",
+    "description": "Complete workflow for fine-tuning LLMs with Unsloth: dataset validation, notebook generation, training management, and model deployment",
+    "skills": [
+      {
+        "name": "funsloth-check",
+        "description": "Validate dataset for fine-tuning: format detection, token analysis, Chinchilla optimality calculation, and optional HF upload. Use before training to ensure data quality.",
+        "file": "skills/funsloth-check/SKILL.md"
+      },
+      {
+        "name": "funsloth-train",
+        "description": "Generate Unsloth training notebooks with sensible defaults, interactive configuration, or ipywidgets for runtime setup. Supports SFT, DPO, GRPO, ORPO, KTO techniques.",
+        "file": "skills/funsloth-train/SKILL.md"
+      },
+      {
+        "name": "funsloth-hfjobs",
+        "description": "Training manager for Hugging Face Jobs. Launches fine-tuning on HF cloud GPUs with optional WandB monitoring. Handles job submission, monitoring, and artifact retrieval.",
+        "file": "skills/funsloth-hfjobs/SKILL.md"
+      },
+      {
+        "name": "funsloth-runpod",
+        "description": "Training manager for RunPod GPU instances. Configures pods, launches training, monitors progress, and retrieves checkpoints from network volumes.",
+        "file": "skills/funsloth-runpod/SKILL.md"
+      },
+      {
+        "name": "funsloth-local",
+        "description": "Training manager for local GPU training. Validates CUDA setup, manages GPU selection, monitors training progress, and handles checkpoint saving.",
+        "file": "skills/funsloth-local/SKILL.md"
+      },
+      {
+        "name": "funsloth-upload",
+        "description": "Generate comprehensive model cards and upload fine-tuned models to Hugging Face Hub. Creates professional documentation with training details, usage examples, and proper metadata.",
+        "file": "skills/funsloth-upload/SKILL.md"
+      }
+    ]
+  }
+}

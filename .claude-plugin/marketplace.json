@@ -1,0 +1,37 @@
+{
+  "name": "funsloth",
+  "owner": {
+    "name": "Chris von Csefalvay",
+    "email": "chris@chrisvoncsefalvay.com"
+  },
+  "metadata": {
+    "description": "Claude Code skills marketplace for fine-tuning language models with Unsloth",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "funsloth",
+      "source": "./",
+      "description": "Complete workflow for fine-tuning LLMs with Unsloth: dataset validation, notebook generation, training management, and model deployment",
+      "version": "1.0.0",
+      "author": {
+        "name": "Chris von Csefalvay",
+        "email": "chris@chrisvoncsefalvay.com"
+      },
+      "repository": "https://github.com/chrisvoncsefalvay/funsloth",
+      "license": "MIT",
+      "keywords": [
+        "unsloth",
+        "fine-tuning",
+        "llm",
+        "lora",
+        "qlora",
+        "machine-learning",
+        "huggingface",
+        "training"
+      ],
+      "category": "machine-learning",
+      "strict": false
+    }
+  ]
+}
