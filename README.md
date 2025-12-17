@@ -1,4 +1,4 @@
-# funsloth
+# funsloth: Fully Automated Luxury LLM Fine-Tuning
 
 A Claude Code skills marketplace for fine-tuning language models with [Unsloth](https://github.com/unslothai/unsloth). It's premised on the [dorkestration](https://chrisvoncsefalvay.com/posts/dorkestration/) paradigm, enabling seamless orchestration of multiple skills to achieve complex workflows using Claude Code.
 
