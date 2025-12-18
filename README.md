@@ -85,6 +85,8 @@ You can also invoke skills directly:
 | ShareGPT | `[{"from": "human", "value": "..."}]` | Conversations |
 | ChatML | `[{"role": "user", "content": "..."}]` | Native chat |
 
+Unsloth supports many [chat templates](https://docs.unsloth.ai/basics/chat-templates) including `llama-3`, `chatml`, `mistral`, `gemma`, `phi-3`, `phi-4`, `qwen-2.5`, `alpaca`, `zephyr` and `vicuna`. Custom templates can be provided as a `(template, eos_token)` tuple.
+
 ## Requirements
 
 - Claude Code CLI
