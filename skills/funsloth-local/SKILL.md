@@ -40,6 +40,27 @@ See [references/HARDWARE_GUIDE.md](references/HARDWARE_GUIDE.md) for requirement
 pip install unsloth torch transformers trl peft datasets accelerate bitsandbytes
 ```
 
+## Docker Option
+
+Use the [official Unsloth Docker image](https://docs.unsloth.ai/new/how-to-fine-tune-llms-with-unsloth-and-docker) for a pre-configured environment (supports all GPUs including Blackwell/50-series):
+
+```bash
+docker run -d \
+  -e JUPYTER_PASSWORD="unsloth" \
+  -p 8888:8888 \
+  -v $(pwd)/work:/workspace/work \
+  --gpus all \
+  unsloth/unsloth
+```
+
+Access Jupyter at `http://localhost:8888`. Example notebooks are in `/workspace/unsloth-notebooks/`.
+
+Environment variables:
+
+- `JUPYTER_PASSWORD` - Jupyter auth (default: `unsloth`)
+- `JUPYTER_PORT` - Port (default: `8888`)
+- `USER_PASSWORD` - User/sudo password (default: `unsloth`)
+
 ## Run Training
 
 ### Option 1: Notebook

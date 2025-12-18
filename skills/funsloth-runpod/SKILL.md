@@ -43,18 +43,27 @@ Allows: resume training, download checkpoints, share between pods.
 
 ### 4. Launch Pod
 
+Use the [official Unsloth Docker image](https://docs.unsloth.ai/new/how-to-fine-tune-llms-with-unsloth-and-docker) for a pre-configured environment:
+
 ```python
 import runpod
 
 pod = runpod.create_pod(
     name="funsloth-training",
-    image_name="runpod/pytorch:2.1.0-py3.10-cuda12.1.0-devel",
+    image_name="unsloth/unsloth",  # Official image, supports all GPUs incl. Blackwell
     gpu_type_id="{gpu_type}",
     volume_in_gb=50,
     network_volume_id="{volume_id}",
-    env={"HF_TOKEN": "{token}", "WANDB_API_KEY": "{key}"},
+    env={
+        "HF_TOKEN": "{token}",
+        "WANDB_API_KEY": "{key}",
+        "JUPYTER_PASSWORD": "unsloth",
+    },
+    ports="8888/http,22/tcp",
 )
 ```
+
+The Unsloth image includes Jupyter Lab (port 8888) and example notebooks in `/workspace/unsloth-notebooks/`.
 
 ### 5. Upload and Run
 
